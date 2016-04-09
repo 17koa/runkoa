@@ -3,7 +3,7 @@
 koa2已发布了一段时间，可以考虑入手，参见[Node.js最新Web技术栈（2016年4月）](https://cnodejs.org/topic/56fdf66ec5f5b4a959e91771)
 
 
-本文主要[koa 2的文档](https://github.com/koajs/koa/blob/v2.x/Readme.md)解读和runkoa介绍，让大家对koa 2有一个更简单直接的理解
+本文主要[koa 2的文档](https://github.com/koajs/koa/blob/v2.x/Readme.md)解读和[runkoa](https://github.com/17koa/runkoa)介绍，让大家对koa 2有一个更简单直接的理解
 
 ## 依赖Node.js 4.0+
 
