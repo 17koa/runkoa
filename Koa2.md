@@ -33,15 +33,15 @@ app.listen(3000);
 
 ## 中间件：Middleware
 
-Koa is an middleware framework, it can take 3 different kind function as middleware:
+Koa 是一个 middleware framework, 它提供了 3 种不同类型的中间件写法
 
 - common function
-- async function
+- async function（新增）
 - generatorFunction
 
-Here we write an logger middleware with different function.
-
 中间件和express的中间件类似，是有顺序的，注意，大部分人都坑死在顺序上
+
+下面以写一个logger中间件为例，一一阐明
 
 ### 最常见的写法
 
