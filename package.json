@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub":"npm publish ."
+    "pub": "npm publish ."
   },
   "preferGlobal": "true",
   "bin": {
@@ -26,5 +26,9 @@
     "babel-polyfill": "^6.1.4",
     "babel-preset-es2015": "^6.1.4",
     "babel-preset-stage-3": "^6.5.0"
+  },
+  "devDependencies": {
+    "co": "^4.6.0",
+    "koa": "^2.0.0"
   }
 }
