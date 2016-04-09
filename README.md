@@ -61,11 +61,20 @@ runkoa app-generator.js
 
 代码变动，使用supervisor或nodemon自动重启服务是开发里比较好的实践，runkoa可以非常好的和它们进行集成，让开发更简单
 
+首先通过runkoa来加载`bin/www`里,代码如下
+
 
 ```
-npm run nodemon
+require('runkoa')(__dirname + '/app.js')
 ```
 
+然后执行
+
+```
+nodemon bin/www
+```
+
+此时，你可以放心的去修改你的代码了
 
 ## Contributing
 
