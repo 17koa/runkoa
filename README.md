@@ -1,6 +1,6 @@
 # runkoa
 
-执行koa的时候需要babel环境，这里稍微简单的封装了一下，以便于更简单的使用koa的时候，不用在意babel的细节
+执行[koa](https://github.com/koajs/koa)用到async的时候需要babel环境，这里稍微简单的封装了一下，以便于更简单的使用koa的时候，不用在意babel的细节
 
 依赖
 
@@ -32,6 +32,15 @@ require('runkoa')(__dirname + '/app.js' )
 ## Test
 
 koa2支持3种写法，分别测试如下
+
+Koa is an middleware framework, it can take 3 different kind function as middleware:
+
+- common function
+- async function
+- generatorFunction
+
+Here we write an logger middleware with different function.
+
 
 ```
 runkoa app.js
