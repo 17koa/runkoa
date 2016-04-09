@@ -22,7 +22,7 @@ npm i -g runkoa
 runkoa app.js
 ```
 
-## Code
+## Code Example
 
 
 ```
