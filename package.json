@@ -1,0 +1,29 @@
+{
+  "name": "runkoa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "runkoa": "bin/runkoa.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i5ting/runkoa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i5ting/runkoa/issues"
+  },
+  "homepage": "https://github.com/i5ting/runkoa#readme",
+  "dependencies": {
+    "babel-core": "^6.7.5",
+    "babel-polyfill": "^6.1.4",
+    "babel-preset-es2015": "^6.1.4",
+    "babel-preset-stage-3": "^6.5.0"
+  }
+}
