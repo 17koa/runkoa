@@ -4,7 +4,8 @@
   "description": "run koa in any flow control(context, generator, async)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cd test && node test.js",
+    "nodemon": "cd test && ../node_modules/.bin/nodemon test.js",
     "pub": "npm publish ."
   },
   "preferGlobal": "true",
@@ -13,14 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/i5ting/runkoa.git"
+    "url": "git+https://github.com/17koa/runkoa.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/i5ting/runkoa/issues"
+    "url": "https://github.com/17koa/runkoa/issues"
   },
-  "homepage": "https://github.com/i5ting/runkoa#readme",
+  "engines": {
+    "node": ">= 0.12.0",
+    "iojs": ">= 1.0.0"
+  },
+  "homepage": "https://github.com/17koa/runkoa#readme",
   "dependencies": {
     "babel-core": "^6.7.5",
     "babel-polyfill": "^6.1.4",
@@ -29,6 +34,7 @@
   },
   "devDependencies": {
     "co": "^4.6.0",
-    "koa": "^2.0.0"
+    "koa": "^2.0.0",
+    "nodemon": "^1.9.1"
   }
 }

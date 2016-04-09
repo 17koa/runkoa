@@ -10,10 +10,16 @@ require('babel-core/register')({
 var fs = require('fs')
 
 module.exports = function (entry) {
-  var is_exist = fs.existsSync(entry)
+  var current_path = process.cwd();
+  var f = current_path + '/bin/www'
+  if (entry){
+    f = entry
+  }
+  var is_exist = fs.existsSync(f)
+  
   if (is_exist === false) {
     return console.log('runkoa entry file is not exist, please check it');
   }
   
-  require(entry) // this is es7 - gets transpile
+  require(f) // this is es7 - gets transpile
 }

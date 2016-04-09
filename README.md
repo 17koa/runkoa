@@ -9,6 +9,15 @@
 - "babel-preset-es2015": "^6.1.4",
 - "babel-preset-stage-3": "^6.5.0"
 
+## Features
+
+- 不需要了解babel即可使用koa2+async组合
+- 对koa项目代码无入侵，启动时入口处理而已
+- 支持koa@2.x里的3种异步调用方式，无需其他，完美支持
+- 支持cli命令，即runkoa执行
+- 默认读取bin/www文件，启动koa服务
+- 遵循小而美
+
 ## Install
 
 ```
@@ -47,6 +56,16 @@ runkoa app.js
 runkoa app-async.js     
 runkoa app-generator.js 
 ```
+
+## 集成supervisor或nodemon
+
+代码变动，使用supervisor或nodemon自动重启服务是开发里比较好的实践，runkoa可以非常好的和它们进行集成，让开发更简单
+
+
+```
+npm run nodemon
+```
+
 
 ## Contributing
 
