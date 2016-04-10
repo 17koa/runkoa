@@ -2,6 +2,8 @@
 
 执行[koa](https://github.com/koajs/koa)用到async的时候需要babel环境，这里稍微简单的封装了一下，以便于更简单的使用koa的时候，不用在意babel的细节
 
+它是[koa-generator](https://github.com/17koa/koa-generator)的核心组件
+
 依赖
 
 - "babel-core": "^6.7.5",
@@ -75,6 +77,23 @@ nodemon bin/www
 ```
 
 此时，你可以放心的去修改你的代码了
+
+## 集成pm2
+
+touch bin/run
+
+```
+var current_path = process.cwd();
+
+require('runkoa')(current_path + '/bin/www' )
+```
+
+然后执行pm2即可
+
+```
+ #npm run pm2
+ pm2 start bin/run 
+```
 
 ## FAQ
 
