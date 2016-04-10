@@ -6,7 +6,7 @@
 
 - "babel-core": "^6.7.5",
 - "babel-polyfill": "^6.1.4",
-- "babel-preset-es2015": "^6.1.4",
+- "babel-preset-es2015-node": "^6.1.4",
 - "babel-preset-stage-3": "^6.5.0"
 
 ## Features
@@ -75,6 +75,61 @@ nodemon bin/www
 ```
 
 此时，你可以放心的去修改你的代码了
+
+## FAQ
+
+### 重复引用require("babel-polyfill")可能出现的问题
+
+```
+➜  koa-demo runkoa index.js 
+index.js
+/Users/sang/workspace/17koa/koa-demo/node_modules/babel-polyfill/lib/index.js:14
+  throw new Error("only one instance of babel-polyfill is allowed");
+  ^
+
+Error: only one instance of babel-polyfill is allowed
+    at Object.<anonymous> (/Users/sang/workspace/17koa/koa-demo/node_modules/babel-polyfill/lib/index.js:14:9)
+    at Module._compile (module.js:434:26)
+    at Module._extensions..js (module.js:452:10)
+    at Object.require.extensions.(anonymous function) [as .js] (/Users/sang/workspace/github/runkoa/node_modules/babel-register/lib/node.js:134:7)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (index.js:3:1)
+    at Module._compile (module.js:434:26)
+➜  koa-demo cat index.js 
+'use strict';
+   
+require("babel-polyfill");
+
+// set babel in entry file
+require('babel-core/register')({
+  presets: ['es2015-node5', 'stage-3']
+});
+
+require('./app'); // this is es7 - gets transpiled
+```
+
+这时正确的操作是
+
+```
+runkoa  app.js
+```
+
+### 如果本地已安装runkoa的依赖，会报错
+
+依赖
+
+- "babel-core": "^6.7.5",
+- "babel-polyfill": "^6.1.4",
+- "babel-preset-es2015-node": "^6.1.4",
+- "babel-preset-stage-3": "^6.5.0"
+
+请保持你的package.json或node_modules目录下无这些依赖即可
+
+这是因为runkoa需要指定babel需要的preset地址
+
 
 ## Contributing
 
