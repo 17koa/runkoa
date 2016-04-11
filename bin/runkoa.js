@@ -12,4 +12,4 @@ console.log(argv[1])
 
 var current_path = process.cwd();
 
-require('..')(current_path + '/' + argv[1])
+require('..')(current_path + '/' + argv[1], is_cli=true)

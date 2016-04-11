@@ -11,6 +11,14 @@
 - "babel-preset-es2015-node": "^6.1.4",
 - "babel-preset-stage-3": "^6.5.0"
 
+
+cli加载的preset是一样的
+
+而引用require的时候
+
+- npm 3是它的上级模块
+- npm 2是当前文件目录下的node_modules\
+
 ## Features
 
 - 不需要了解babel即可使用koa2+async组合
