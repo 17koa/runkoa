@@ -5,7 +5,7 @@ require("babel-polyfill")
 // var dir =  __dirname + '/node_modules/'
 // set babel in entry file
 require('babel-core/register')({
-  presets: ['babel-preset-es2015-node5', 'babel-preset-stage-3'],
+  presets: [require('babel-preset-es2015-node5'), require('babel-preset-stage-3')],
   babelrc: false
 })
 
