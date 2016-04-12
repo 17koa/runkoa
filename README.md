@@ -1,5 +1,9 @@
 # runkoa
 
+
+[![npm version](https://badge.fury.io/js/runkoa.svg)](http://badge.fury.io/js/runkoa)
+[![Build](https://travis-ci.org/17koa/runkoa.svg?branch=master)](https://travis-ci.org/17koa/runkoa)
+
 执行[koa](https://github.com/koajs/koa)用到async的时候需要babel环境，这里稍微简单的封装了一下，以便于更简单的使用koa的时候，不用在意babel的细节
 
 它是[koa-generator](https://github.com/17koa/koa-generator)的核心组件
