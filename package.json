@@ -16,14 +16,13 @@
     "type": "git",
     "url": "git+https://github.com/17koa/runkoa.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "i5ting",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/17koa/runkoa/issues"
   },
   "engines": {
-    "node": ">= 0.12.0",
-    "iojs": ">= 1.0.0"
+    "node": ">= 4"
   },
   "homepage": "https://github.com/17koa/runkoa#readme",
   "dependencies": {
