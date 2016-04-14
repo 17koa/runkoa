@@ -12,4 +12,6 @@ console.log(argv[1])
 
 var current_path = process.cwd();
 
-require('..')(current_path + '/' + argv[1], is_cli=true)
+var entry = require('path').resolve(process.cwd(), argv[1])
+
+require('..')(entry, is_cli=true)

@@ -34,7 +34,12 @@
   },
   "devDependencies": {
     "co": "^4.6.0",
+    "coffee": "^3.2.1",
     "koa": "^2.0.0",
-    "nodemon": "^1.9.1"
+    "mocha": "^2.4.5",
+    "nodemon": "^1.9.1",
+    "request": "^2.71.0",
+    "should": "^8.3.0",
+    "supertest": "^1.2.0"
   }
 }
