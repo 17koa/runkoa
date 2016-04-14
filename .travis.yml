@@ -2,13 +2,7 @@ sudo: false
 language: node_js
 node_js:
   - stable
+  - 5
   - 4
-  - 3
-  - 2
-  - 1
-  - 0.12
-before_script:
-  - npm i npm@$NPMVER -g
-env:
-  - NPMVER=2
-  - NPMVER=3
+script: 
+  - npm start
