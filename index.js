@@ -45,7 +45,7 @@ module.exports = function (entry, is_cli) {
 function get_dirname_in_node_modules(){
   var dir =  __dirname + '/node_modules/'
   var plugin_dir = dir + 'babel-plugin-'
-  console.log('babel presets path = ' + dir)
+  console.log('3babel presets path = ' + dir)
   // npm 3.x set babel in entry file
   require('babel-core/register')({
     plugins: [plugin_dir + 'add-module-exports', plugin_dir + 'transform-es2015-modules-commonjs'],
@@ -56,8 +56,17 @@ function get_dirname_in_node_modules(){
 
 function get_dirname_in_parent(){
   var dir =  __dirname.replace('runkoa', '')
+
   var plugin_dir = dir + 'babel-plugin-'
-  console.log('babel presets path = ' + dir)
+  
+  
+  if(is_npm_v3 === true && process.env.RUNKOA_TEST){
+    dir = dir + 'runkoa/node_modules/'
+    plugin_dir = dir + 'babel-plugin-'
+  }
+  
+  console.log('2babel presets path = ' + dir)
+  
   // npm 2.x set babel in entry file
   require('babel-core/register')({
     plugins: [plugin_dir + 'add-module-exports', plugin_dir + 'transform-es2015-modules-commonjs'],

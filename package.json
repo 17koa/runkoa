@@ -1,10 +1,10 @@
 {
   "name": "runkoa",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "run koa in any flow control(context, generator, async)",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -u bdd --compilers js:babel-core/register",
+    "test": "RUNKOA_TEST=1 ./node_modules/.bin/mocha -u bdd --compilers js:babel-core/register",
     "nodemon": "cd test && ../node_modules/.bin/nodemon test.js",
     "pub": "npm publish ."
   },
