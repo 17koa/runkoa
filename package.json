@@ -4,7 +4,7 @@
   "description": "run koa in any flow control(context, generator, async)",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -u bdd",
+    "test": "./node_modules/.bin/mocha -u bdd --compilers js:babel-core/register",
     "nodemon": "cd test && ../node_modules/.bin/nodemon test.js",
     "pub": "npm publish ."
   },
@@ -28,6 +28,7 @@
   "dependencies": {
     "babel-core": "^6.7.5",
     "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.7.4",
     "babel-polyfill": "^6.1.4",
     "babel-preset-es2015-node5": "^1.2.0",
     "babel-preset-stage-3": "^6.5.0"

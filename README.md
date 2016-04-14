@@ -8,20 +8,13 @@
 
 它是[koa-generator](https://github.com/17koa/koa-generator)的核心组件
 
-依赖
+## 依赖
 
 - "babel-core": "^6.7.5",
 - "babel-polyfill": "^6.1.4",
 - "babel-preset-es2015-node": "^6.1.4",
-- "babel-preset-stage-3": "^6.5.0"
-
-
-cli加载的preset是一样的
-
-而引用require的时候
-
-- npm 3是它的上级模块
-- npm 2是当前文件目录下的node_modules\
+- "babel-preset-stage-3": "^6.5.0",
+- "babel-plugin-add-module-exports": "^0.1.2",
 
 ## Features
 
