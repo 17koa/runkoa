@@ -4,7 +4,7 @@
   "description": "run koa in any flow control(context, generator, async)",
   "main": "index.js",
   "scripts": {
-    "test": "cd test && node test.js",
+    "test": "./node_modules/.bin/mocha -u bdd",
     "nodemon": "cd test && ../node_modules/.bin/nodemon test.js",
     "pub": "npm publish ."
   },
