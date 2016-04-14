@@ -19,11 +19,7 @@ module.exports = function (entry, is_cli) {
   
   var current_path = process.cwd();
   var f = current_path + '/bin/www'
-    
-  console.log(f)
-  
-    
-  console.log(entry)
+
   if (is_cli == true && entry && /^\//.test(entry)){
     f = entry
   }
