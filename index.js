@@ -39,7 +39,7 @@ function get_dirname_in_node_modules(){
   console.log('babel presets path = ' + dir)
   // npm 3.x set babel in entry file
   require('babel-core/register')({
-    presets: [dir + 'babel-preset-es2015-node5', dir + 'babel-preset-stage-3'],
+    presets: [dir + 'babel-preset-es2015-node5', dir + 'babel-preset-stage-3', dir + 'add-module-exports'],
     babelrc: false
   })  
 }
