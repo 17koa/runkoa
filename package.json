@@ -1,6 +1,6 @@
 {
   "name": "runkoa",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "run koa in any flow control(context, generator, async)",
   "main": "index.js",
   "scripts": {

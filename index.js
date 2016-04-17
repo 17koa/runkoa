@@ -31,6 +31,8 @@ module.exports = function (entry, is_cli) {
 
   if (is_cli == true && entry && /^\//.test(entry)){
     f = entry
+  } else {
+    f = entry
   }
   
   var is_exist = fs.existsSync(f)
