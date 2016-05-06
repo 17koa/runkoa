@@ -39,7 +39,7 @@ module.exports = function (entry, is_cli) {
   var is_exist = fs.existsSync(f)
 
   if (is_exist === false) {
-    return console.log('runkoa entry file is not exist, please check it');
+    return console.error('runkoa entry file is not exist, please check it');
   }
 
   require(f) // this is es7 - gets transpile
