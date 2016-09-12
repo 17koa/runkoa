@@ -46,7 +46,7 @@ module.exports = function (entry, is_cli) {
 }
 
 function get_dirname_in_node_modules(){
-  var dir =  path.resolve(__dirname, '..')
+  var dir =  path.resolve(__dirname, '../../node_modules')
   var plugin_base = 'babel-plugin-'
   console.log('3babel presets path = ' + dir)
   // npm 3.x set babel in entry file
