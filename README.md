@@ -8,7 +8,7 @@
 
 它是[koa-generator](https://github.com/17koa/koa-generator)的核心组件
 
-- 暂时不支持window
+- 暂时不支持Windows
 
 ## 依赖
 
