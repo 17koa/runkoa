@@ -20,6 +20,7 @@
 
 ## Features
 
+- if use node v7.x，runkoa is an alias with `node --harmony-async-await`
 - 不需要了解babel即可使用koa2+async组合
 - 对koa项目代码无入侵，启动时入口处理而已
 - 支持koa@2.x里的3种异步调用方式，无需其他，完美支持
