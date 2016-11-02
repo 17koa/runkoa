@@ -60,7 +60,7 @@ function get_dirname_in_node_modules(){
 
 function get_dirname_in_parent(){
   var dir =  __dirname.replace('runkoa', '')
-  var plugin_dir = dir + 'babel-plugin-'
+  var plugin_base = 'babel-plugin-'
 
   if(is_npm_v3 === true && process.env.RUNKOA_TEST){
     dir = path.resolve(dir, 'runkoa/node_modules/')
