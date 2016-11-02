@@ -4,6 +4,7 @@ require("babel-polyfill")
 
 var fs = require('fs')
 var debug = require('debug')('runkoa')
+var path = require('path')
 
 var is_npm_v3 = /^3/.test(require('child_process').execSync('npm -v').toString())
 
@@ -28,7 +29,7 @@ module.exports = function (entry, is_cli) {
   }
 
   var current_path = process.cwd();
-  var f = current_path + '/bin/www'
+  var f = path.resolve(current_path, '/bin/www')
 
   if (is_cli == true && entry && /^\//.test(entry)){
     f = entry
@@ -46,34 +47,31 @@ module.exports = function (entry, is_cli) {
 }
 
 function get_dirname_in_node_modules(){
-  var dir =  __dirname + '/node_modules/'
-  var plugin_dir = dir + 'babel-plugin-'
-  debug('3babel presets path = ' + dir)
+  var dir =  path.resolve(__dirname, 'node_modules/')
+  var plugin_base = 'babel-plugin-'
+  console.log('3babel presets path = ' + dir)
   // npm 3.x set babel in entry file
   require('babel-core/register')({
-    plugins: [plugin_dir + 'add-module-exports', plugin_dir + 'transform-es2015-modules-commonjs'],
-    presets: [dir + 'babel-preset-es2015-node5', dir + 'babel-preset-stage-3'],
+    plugins: [path.resolve(dir, plugin_base + 'add-module-exports'), path.resolve(dir, plugin_base + 'transform-es2015-modules-commonjs')],
+    presets: [path.resolve(dir, 'babel-preset-es2015-node5'), path.resolve(dir, 'babel-preset-stage-3')],
     babelrc: false
   })
 }
 
 function get_dirname_in_parent(){
   var dir =  __dirname.replace('runkoa', '')
-
   var plugin_dir = dir + 'babel-plugin-'
 
-
   if(is_npm_v3 === true && process.env.RUNKOA_TEST){
-    dir = dir + 'runkoa/node_modules/'
-    plugin_dir = dir + 'babel-plugin-'
+    dir = path.resolve(dir, 'runkoa/node_modules/')
   }
 
   debug('2babel presets path = ' + dir)
 
   // npm 2.x set babel in entry file
   require('babel-core/register')({
-    plugins: [plugin_dir + 'add-module-exports', plugin_dir + 'transform-es2015-modules-commonjs'],
-    presets: [dir + 'babel-preset-es2015-node5', dir + 'babel-preset-stage-3'],
+    plugins: [path.resolve(dir, plugin_base + 'add-module-exports'), path.resolve(dir, plugin_base + 'transform-es2015-modules-commonjs')],
+    presets: [path.resolve(dir, 'babel-preset-es2015-node5'), path.resolve(dir, 'babel-preset-stage-3')],
     babelrc: false
   })
 }
