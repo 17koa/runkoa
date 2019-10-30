@@ -32,7 +32,7 @@
     "babel-polyfill": "^6.1.4",
     "babel-preset-es2015-node5": "^1.2.0",
     "babel-preset-stage-3": "^6.5.0",
-    "debug": "2.2.0"
+    "debug": "4.1.1"
   },
   "devDependencies": {
     "co": "^4.6.0",
